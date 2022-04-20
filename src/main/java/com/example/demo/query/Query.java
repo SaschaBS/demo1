@@ -1,4 +1,4 @@
-package com.example.demo.repo;
+package com.example.demo.query;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.example.demo.model.Post;
@@ -8,8 +8,19 @@ import java.util.List;
 
 @Component
 public class Query implements GraphQLQueryResolver {
-    public List<Post> getRecentPosts(int count, int offset) {
-        Post post = new Post("1", "bla", "foo");
-        return List.of(post);
+
+    private final Post post;
+
+    public Query() {
+        this.post = new Post("1", "bla", "foo");
     }
+
+    public List<Post> getRecentPosts(int count, int offset) {
+        return List.of(this.post);
+    }
+
+    public List<Post> allPosts() {
+        return List.of(this.post);
+    }
+
 }

@@ -16,7 +16,9 @@ type Post {
 # The Root Query for the application
 type Query {
     recentPosts(count: Int, offset: Int): [Post]!
+    allPosts : [Post]
 }
+
 
 ## The Root Mutation for the application
 #type Mutation {
