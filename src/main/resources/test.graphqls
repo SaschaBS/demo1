@@ -19,6 +19,13 @@ type Query {
     allPosts : [Post]
 }
 
+type Subscription {
+    postUpdates : [Post]
+}
+
+
+
+
 
 ## The Root Mutation for the application
 #type Mutation {

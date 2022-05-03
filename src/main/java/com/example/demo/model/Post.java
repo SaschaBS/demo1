@@ -5,6 +5,7 @@ public class Post {
     private String id;
     private String title;
     private String category;
+    private String geheim;
 
     public Post() {
     }
